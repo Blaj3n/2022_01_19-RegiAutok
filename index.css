@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+main {
+    display: grid;
+    grid-template-areas:    "h h h"
+                            "n n n"
+                            "ar ar as"
+                            "f f f";
+    max-width: 1000px;
+    text-align: justify;
+    font-size: 18px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+header {
+    grid-area: h;
+}
+nav {
+    grid-area: n;
+}
+
+/*article start*/
+article {
+    grid-area: ar;
+    padding: 10px;
+    border: 1px solid grey;
+}
+article .fotarolo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+article .tarolo {
+    margin: 20px;
+    border: 1px solid grey;
+}
+article .tarolo h1 {
+    color: green;
+}
+article div img {
+    width: 100%;
+}
+/*article end*/
+
+/*table start*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table tr td {
+    padding: 20px;
+}
+table tr:first-child td {
+    border-bottom: 2px solid black;
+}
+table tr:nth-child(even) {
+    background-color: lightgrey;
+}
+/*table end*/
+
+aside {
+    grid-area: as;
+}
+footer {
+    grid-area: f;
+    text-align: center;
+}
+.focim {
+    color: green;
+    margin: 0;
+}
+
+/*nav start*/
+.topnav {
+    background-color: green;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+.topnav a:hover {
+    background-color:white;
+    color: black;
+}
+.topnav a.active {
+    background-color: white;
+    color: black;
+}
+/*nav end*/
+
+img {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid grey;
+}
+.lista {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        grid-template-areas:    "h"
+                                "n"
+                                "ar"
+                                "as"
+                                "f"
+                                ;
+        grid-template-columns: 1fr;
+        }
+    article .fotarolo {
+        grid-template-columns: 1fr;
+    }
+    .topnav a {
+        clear: both;
+    }
+  }
